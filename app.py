@@ -1,32 +1,4 @@
 
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@BIDISHA-CHANDA
-Learn Git and GitHub without any code!
-
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-nachi-hebbar /
-Forest-Fire-Prediction-Website
-
-1
-40
-
-    46
-
-Code
-Issues
-Pull requests 2
-Actions
-Projects
-Wiki
-Security
-
-    Insights
-
-Forest-Fire-Prediction-Website/app.py /
 
 
 
