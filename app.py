@@ -8,7 +8,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-model=pickle.load(open('model.pkl','rb'))
+model=pickle.load(open('co2_final.pkl','rb'))
 
 
 @app.route('/')
