@@ -4,7 +4,7 @@ from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('co2_final.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -15,9 +15,10 @@ def predict():
   input_features = [int(x) for x in request.form.values()]
   features_value = [np.array(input_features)]
 
-  features_name = ['clump_thickness', 'uniform_cell_size', 'uniform_cell_shape',
-       'marginal_adhesion', 'single_epithelial_size', 'bare_nuclei',
-       'bland_chromatin', 'normal_nucleoli', 'mitoses']
+  features_name = ['Engine_Size(L)', 'Cylinders',
+        'Fuel_Consumption_City_(L/100 km)',
+       'Fuel_Consumption_Hwy_(L/100 km)', 'Fuel_Consumption_Comb_(L/100 km)',
+       'Fuel_Consumption_Comb_(mpg)']
 
   df = pd.DataFrame(features_value, columns=features_name)
   output = model.predict(df)
