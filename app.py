@@ -19,21 +19,21 @@ def predict():
   input_features = [int(x) for x in request.form.values()]
   features_value = [np.array(input_features)]
 
-  features_name = ['Engine_Size(L)', 'Cylinders',
-        'Fuel_Consumption_City_(L/100 km)',
-       'Fuel_Consumption_Hwy_(L/100 km)', 'Fuel_Consumption_Comb_(L/100 km)',
-       'Fuel_Consumption_Comb_(mpg)']
+  features_name = ['Engine Size(L)', 'Cylinders',
+        'Fuel Consumption_City_(L/100 km)',
+       'Fuel Consumption Hwy (L/100 km)', 'Fuel Consumption Comb (L/100 km)',
+       'Fuel Consumption Comb (mpg)']
 
   df = pd.DataFrame(features_value, columns=features_name)
   output = model.predict(df)
 
-  if output >= 300:
-      res_val = "Breast cancer"
+  if int(output) >= 300:
+      res_val = "HIGH CO2 EMISSION"
   else:
-      res_val = "no Breast cancer"
+      res_val = "LOW CO2 EMISSION"
 
 
-  return render_template('index.html', prediction_text='Patient has {}'.format(res_val))
+  return render_template('index.html', prediction_text='THE MODEL HAS {}'.format(res_val))
   
 
 if __name__ == "__main__":
