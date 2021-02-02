@@ -20,7 +20,7 @@ def predict():
   features_value = [np.array(input_features)]
 
   features_name = ['Engine Size(L)', 'Cylinders',
-        'Fuel Consumption_City_(L/100 km)',
+        'Fuel Consumption City (L/100 km)',
        'Fuel Consumption Hwy (L/100 km)', 'Fuel Consumption Comb (L/100 km)',
        'Fuel Consumption Comb (mpg)']
 
