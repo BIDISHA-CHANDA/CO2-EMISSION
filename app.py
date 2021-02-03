@@ -26,7 +26,7 @@ def predict():
 
   df = pd.DataFrame(features_value, columns=features_name)
   output = model.predict(df)
-
+  print(output)
   if output >= 300:
       res_val = "HIGH CO2 EMISSION"
   else:
