@@ -33,7 +33,7 @@ def predict():
       res_val = "LOW CO2 EMISSION"
 
 
-  return render_template('index.html', prediction_text='THE MODEL HAS {}'.format(res_val))
+  return render_template('index.html', prediction_text='THE MODEL HAS {}'.format(res_val,output))
   
 
 if __name__ == "__main__":
